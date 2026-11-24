@@ -19,7 +19,7 @@ export default function ResumePage() {
         <div className="resume-toolbar" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "28px", paddingBottom: "16px", borderBottom: "1px solid #1e2433", flexWrap: "wrap", gap: "12px" }}>
           <Link href="/" className="cli-btn-link">
             <ArrowLeft size={14} />
-            <span>← Voltar à Vitrine</span>
+            <span>Voltar a Vitrine</span>
           </Link>
           <div style={{ display: "flex", gap: "10px", alignItems: "center", flexWrap: "wrap" }}>
             <CopyButton text={personalInfo.email} label="Copiar E-mail" />
@@ -39,7 +39,7 @@ export default function ResumePage() {
           </div>
         </div>
 
-        {/* Folha do Currículo */}
+        {/* Folha do Curriculo */}
         <article className="resume-paper" style={{ background: "#11141d", border: "1px solid #1e2538", borderRadius: "8px", padding: "48px" }}>
           {/* Header */}
           <header style={{ borderBottom: "2px solid #28334a", paddingBottom: "20px", marginBottom: "24px" }}>
@@ -47,12 +47,12 @@ export default function ResumePage() {
               LUIZ FELIPE DOS SANTOS
             </h1>
             <div style={{ fontSize: "1.1rem", fontWeight: 700, color: "#38bdf8", marginBottom: "12px" }}>
-              Desenvolvedor Full-Stack | Microsserviços em Go, GraphQL, RabbitMQ, Next.js & PostgreSQL
+              Desenvolvedor Full-Stack | Microsserviços em Go, GraphQL, RabbitMQ, Next.js e PostgreSQL
             </div>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "14px", fontSize: "0.88rem", color: "#94a3b8" }}>
-              <span>📍 Uberlândia, MG</span>
+              <span>Uberlândia, MG</span>
               <span>•</span>
-              <span>📱 (34) 99161-4690</span>
+              <span>(34) 99161-4690</span>
               <span>•</span>
               <a href={`mailto:${personalInfo.email}`} style={{ color: "#38bdf8" }}>{personalInfo.email}</a>
               <span>•</span>
@@ -72,11 +72,11 @@ export default function ResumePage() {
               PERFIL PROFISSIONAL
             </div>
             <p style={{ color: "#cbd5e1", lineHeight: "1.65" }}>
-              Desenvolvedor Full-Stack com foco em microsserviços e arquiteturas distribuídas com <strong>Go (Golang)</strong>, <strong>GraphQL</strong>, <strong>RabbitMQ</strong>, <strong>Next.js 16</strong> e <strong>PostgreSQL</strong>. Graduando em Sistemas de Informação (7º período), uno bagagem prática de empreendedorismo e liderança operacional (sócio e gerente geral da ECV Uberlândia 2022–2025 com início de carreira nas entregas e trabalho de rua), aliando resiliência, disciplina e visão de negócio à capacidade técnica de construir softwares robustos e escaláveis. Criador da plataforma <strong>KORIS</strong> e desenvolvedor de sistemas em produção ativa.
+              Desenvolvedor Full-Stack focado em microsserviços e arquiteturas distribuídas com <strong>Go (Golang)</strong>, <strong>GraphQL</strong>, <strong>RabbitMQ</strong>, <strong>Next.js 16</strong> e <strong>PostgreSQL</strong>. Graduando em Sistemas de Informação (7º período) e <strong>Sócio Proprietário de empresa (ECV Uberlândia / 2022 a Presente)</strong> com início de carreira no trabalho de entregas operacionais. Uno a vivência de fluxo de caixa, gestão e dores reais de negócio à capacidade técnica de construir ferramentas e softwares robustos para automação e gestão operacional. Criador da plataforma <strong>KORIS</strong> e de sistemas em produção ativa.
             </p>
           </section>
 
-          {/* Experiência */}
+          {/* Experiencia */}
           <section style={{ marginBottom: "28px" }}>
             <div className="resume-section-title" style={{ fontSize: "0.85rem", fontWeight: 800, color: "#38bdf8", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "14px", borderBottom: "1px solid #222d42", paddingBottom: "4px" }}>
               EXPERIÊNCIA PROFISSIONAL
@@ -85,10 +85,10 @@ export default function ResumePage() {
             <div style={{ marginBottom: "20px" }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", flexWrap: "wrap" }}>
                 <strong style={{ fontSize: "1.05rem", color: "#ffffff" }}>Desenvolvedor Full-Stack Junior</strong>
-                <span style={{ fontSize: "0.85rem", fontWeight: 700, color: "#38bdf8", fontFamily: "var(--font-mono)" }}>2025 – Presente</span>
+                <span style={{ fontSize: "0.85rem", fontWeight: 700, color: "#38bdf8", fontFamily: "var(--font-mono)" }}>2025 a Presente</span>
               </div>
               <div style={{ fontSize: "0.88rem", color: "#94a3b8", fontStyle: "italic", marginBottom: "8px" }}>
-                Posição Atual • Microsserviços & Sistemas Distribuídos
+                Posição Atual: Microsserviços e Sistemas Distribuídos
               </div>
               <ul style={{ paddingLeft: "18px", display: "flex", flexDirection: "column", gap: "6px", color: "#cbd5e1", fontSize: "0.92rem" }}>
                 <li>Desenvolvimento e refatoração de microsserviços em Go (Golang) de alta concorrência e baixo consumo de memória.</li>
@@ -101,23 +101,24 @@ export default function ResumePage() {
 
             <div style={{ marginBottom: "20px" }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", flexWrap: "wrap" }}>
-                <strong style={{ fontSize: "1.05rem", color: "#ffffff" }}>Sócio Proprietário / Gerente Geral</strong>
-                <span style={{ fontSize: "0.85rem", fontWeight: 700, color: "#38bdf8", fontFamily: "var(--font-mono)" }}>2022 – 2025</span>
+                <strong style={{ fontSize: "1.05rem", color: "#ffffff" }}>Sócio Proprietário / Gestão e Desenvolvimento de Ferramentas</strong>
+                <span style={{ fontSize: "0.85rem", fontWeight: 700, color: "#38bdf8", fontFamily: "var(--font-mono)" }}>2022 a Presente</span>
               </div>
               <div style={{ fontSize: "0.88rem", color: "#94a3b8", fontStyle: "italic", marginBottom: "8px" }}>
-                ECV Uberlândia Ltda. • Gestão Executiva e Operacional
+                ECV Uberlândia Ltda. / Gestão e Engenharia de Processos
               </div>
               <ul style={{ paddingLeft: "18px", display: "flex", flexDirection: "column", gap: "6px", color: "#cbd5e1", fontSize: "0.92rem" }}>
-                <li>Gestão integral da empresa: equipe técnica, fluxo de caixa, precificação, logística e relacionamento com clientes e órgãos de trânsito.</li>
-                <li>Liderança na implantação de melhorias internas de processos e conformidade regulatória.</li>
-                <li>Concepção e implantação de automações em Python com filas assíncronas para montagem de laudos, reduzindo o tempo de 20 minutos para 2 a 3 minutos por veículo.</li>
+                <li>Proprietário da empresa com gestão direta de equipe técnica, contratações e cultura operacional.</li>
+                <li>Supervisão direta das finanças, fluxo de caixa, precificação de serviços e relacionamento com órgãos fiscalizadores de trânsito.</li>
+                <li>Identificação de gargalos operacionais e desenvolvimento de softwares e automações em Python com filas assíncronas para montagem de laudos, reduzindo o tempo de 20 minutos para 2 a 3 minutos por veículo.</li>
+                <li>Aplicação direta da vivência de dono e gestor na concepção de ferramentas de software para controle financeiro e processos.</li>
               </ul>
             </div>
 
             <div style={{ marginBottom: "20px" }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", flexWrap: "wrap" }}>
                 <strong style={{ fontSize: "1.05rem", color: "#ffffff" }}>Coordenador Administrativo / Vistoriador</strong>
-                <span style={{ fontSize: "0.85rem", fontWeight: 700, color: "#38bdf8", fontFamily: "var(--font-mono)" }}>2019 – 2022</span>
+                <span style={{ fontSize: "0.85rem", fontWeight: 700, color: "#38bdf8", fontFamily: "var(--font-mono)" }}>2019 a 2022</span>
               </div>
               <div style={{ fontSize: "0.88rem", color: "#94a3b8", fontStyle: "italic", marginBottom: "8px" }}>
                 Iso Prime Brasil Vistorias Ltda.
@@ -130,15 +131,15 @@ export default function ResumePage() {
 
             <div style={{ marginBottom: "20px" }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", flexWrap: "wrap" }}>
-                <strong style={{ fontSize: "1.05rem", color: "#ffffff" }}>Entregador & Atendimento Operacional</strong>
-                <span style={{ fontSize: "0.85rem", fontWeight: 700, color: "#38bdf8", fontFamily: "var(--font-mono)" }}>2018 – 2019</span>
+                <strong style={{ fontSize: "1.05rem", color: "#ffffff" }}>Entregador e Atendimento Operacional</strong>
+                <span style={{ fontSize: "0.85rem", fontWeight: 700, color: "#38bdf8", fontFamily: "var(--font-mono)" }}>2018 a 2019</span>
               </div>
               <div style={{ fontSize: "0.88rem", color: "#94a3b8", fontStyle: "italic", marginBottom: "8px" }}>
                 Trabalho Autônomo e Serviços de Entrega
               </div>
               <ul style={{ paddingLeft: "18px", display: "flex", flexDirection: "column", gap: "6px", color: "#cbd5e1", fontSize: "0.92rem" }}>
                 <li>Atuação com pontualidade rigorosa, dinamismo e resolução ágil de imprevistos nas rotas de rua.</li>
-                <li>Desenvolvimento da base de disciplina, resiliência física/mental e disposição inegociável para o trabalho duro.</li>
+                <li>Desenvolvimento da base de disciplina, resiliência física e mental e disposição inegociável para o trabalho duro.</li>
               </ul>
             </div>
           </section>
@@ -146,13 +147,13 @@ export default function ResumePage() {
           {/* Projetos Técnicos de Engenharia */}
           <section style={{ marginBottom: "28px" }}>
             <div className="resume-section-title" style={{ fontSize: "0.85rem", fontWeight: 800, color: "#38bdf8", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "14px", borderBottom: "1px solid #222d42", paddingBottom: "4px" }}>
-              PROJETOS EM PRODUÇÃO & DESTAQUE TÉCNICO
+              PROJETOS EM PRODUÇÃO E DESTAQUE TÉCNICO
             </div>
 
             {/* KORIS */}
             <div style={{ marginBottom: "16px" }}>
               <div style={{ display: "flex", alignItems: "baseline", gap: "8px", flexWrap: "wrap" }}>
-                <strong style={{ fontSize: "1rem", color: "#38bdf8" }}>KORIS — Sistema de Gestão de Caixa & Operações (Em Produção • Domínio Próprio)</strong>
+                <strong style={{ fontSize: "1rem", color: "#38bdf8" }}>KORIS: Sistema de Gestão de Caixa e Operações (Em Produção / Domínio Próprio)</strong>
                 <span style={{ fontSize: "0.82rem", color: "#94a3b8" }}>GoLang • GraphQL • RabbitMQ • Next.js 16 • PostgreSQL • Docker</span>
               </div>
               <p style={{ color: "#cbd5e1", fontSize: "0.9rem", marginTop: "4px" }}>
@@ -163,11 +164,11 @@ export default function ResumePage() {
             {/* Sistema de Documentos */}
             <div style={{ marginBottom: "16px" }}>
               <div style={{ display: "flex", alignItems: "baseline", gap: "8px", flexWrap: "wrap" }}>
-                <strong style={{ fontSize: "1rem", color: "#4ade80" }}>Sistema de Documentos & Laudos Veiculares (Em Produção)</strong>
+                <strong style={{ fontSize: "1rem", color: "#4ade80" }}>Sistema de Documentos e Laudos Veiculares (Em Produção)</strong>
                 <span style={{ fontSize: "0.82rem", color: "#94a3b8" }}>TypeScript • Node.js • PostgreSQL • Docker • Geração de PDFs</span>
               </div>
               <div style={{ fontSize: "0.8rem", color: "#38bdf8", marginTop: "2px" }}>
-                🤝 Co-desenvolvido em parceria técnica com Cayke Nakazone (github.com/caykenakazone)
+                Co-desenvolvido em parceria técnica com Cayke Nakazone (github.com/caykenakazone)
               </div>
               <p style={{ color: "#cbd5e1", fontSize: "0.9rem", marginTop: "4px" }}>
                 Aplicação corporativa em produção ativa para gestão eletrônica de documentos, emissão e exportação em lote de laudos e vistorias veiculares com controle fiscal, anexação de fotos e auditoria digital.
@@ -188,7 +189,7 @@ export default function ResumePage() {
             {/* Megalaudo Automação */}
             <div style={{ marginBottom: "16px" }}>
               <div style={{ display: "flex", alignItems: "baseline", gap: "8px", flexWrap: "wrap" }}>
-                <strong style={{ fontSize: "1rem", color: "#ffffff" }}>Megalaudo — Automação do Processo de Montagem de Laudos com Filas</strong>
+                <strong style={{ fontSize: "1rem", color: "#ffffff" }}>Megalaudo: Automação do Processo de Montagem de Laudos com Filas</strong>
                 <span style={{ fontSize: "0.82rem", color: "#94a3b8" }}>Python • Selenium • Filas Assíncronas • Tkinter • ReportLab</span>
               </div>
               <p style={{ color: "#cbd5e1", fontSize: "0.9rem", marginTop: "4px" }}>
@@ -207,7 +208,7 @@ export default function ResumePage() {
               <span style={{ fontSize: "0.85rem", fontWeight: 700, color: "#38bdf8", fontFamily: "var(--font-mono)" }}>7º Período em andamento</span>
             </div>
             <div style={{ fontSize: "0.85rem", color: "#94a3b8" }}>
-              Centro Universitário Anhanguera (Uberlândia/MG) • 2022 – 2026
+              Centro Universitário Anhanguera (Uberlândia/MG) / 2022 a 2026
             </div>
           </section>
 
@@ -218,16 +219,16 @@ export default function ResumePage() {
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: "6px", fontSize: "0.9rem", color: "#cbd5e1" }}>
               <div>
-                <strong style={{ color: "#ffffff" }}>Linguagens & Frameworks:</strong> Go (Golang), TypeScript, React 19, Next.js 16, Node.js, Python, React Native (Expo).
+                <strong style={{ color: "#ffffff" }}>Linguagens e Frameworks:</strong> Go (Golang), TypeScript, React 19, Next.js 16, Node.js, Python, React Native (Expo).
               </div>
               <div>
-                <strong style={{ color: "#ffffff" }}>Arquitetura & Mensageria:</strong> GraphQL (Apollo Server/Client), RabbitMQ (AMQP), Microsserviços, REST APIs.
+                <strong style={{ color: "#ffffff" }}>Arquitetura e Mensageria:</strong> GraphQL (Apollo Server/Client), RabbitMQ (AMQP), Microsserviços, REST APIs.
               </div>
               <div>
-                <strong style={{ color: "#ffffff" }}>Banco de Dados & Infra:</strong> PostgreSQL (ACID), Redis, Docker, Docker Compose, Git.
+                <strong style={{ color: "#ffffff" }}>Banco de Dados e Infra:</strong> PostgreSQL (ACID), Redis, Docker, Docker Compose, Git.
               </div>
               <div>
-                <strong style={{ color: "#ffffff" }}>Automação & Processos:</strong> Python, Filas Assíncronas, Selenium, Geração de PDFs (ReportLab), Chatbots.
+                <strong style={{ color: "#ffffff" }}>Automação e Processos:</strong> Python, Filas Assíncronas, Selenium, Geração de PDFs (ReportLab), Chatbots.
               </div>
               <div>
                 <strong style={{ color: "#ffffff" }}>Idiomas:</strong> Português (Nativo), Inglês (Intermediário) • <strong>Idade:</strong> 22 anos • <strong>CNH:</strong> AB

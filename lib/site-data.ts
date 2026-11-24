@@ -37,8 +37,8 @@ export const personalInfo = {
   name: "Luiz Felipe dos Santos",
   role: "Desenvolvedor Full-Stack",
   headline: "Engenharia de microsserviços em Go, GraphQL, RabbitMQ e interfaces em Next.js com domínio próprio em KORIS.",
-  bio: "Desenvolvedor Full-Stack focado em arquiteturas resilientes e microsserviços com Go, GraphQL, RabbitMQ, React e TypeScript. Graduando em Sistemas de Informação (7º período), uno bagagem sólida de vida real (início como entregador, sócio proprietário e gerente geral de ECV) a uma capacidade técnica orientada a resolver problemas reais de negócio.",
-  location: "Uberlândia, MG - Brasil",
+  bio: "Desenvolvedor Full-Stack focado em arquiteturas resilientes e microsserviços com Go, GraphQL, RabbitMQ, React e TypeScript. Graduando em Sistemas de Informação (7º período) e Sócio Proprietário de empresa (ECV Uberlândia / 2022 a Presente). Uno a vivência prática de fluxo de caixa e gestão à capacidade técnica de construir ferramentas que resolvem dores reais de negócio.",
+  location: "Uberlândia, MG / Brasil",
   email: "luizz.felipe.santos17@gmail.com",
   phone: "(34) 99161-4690",
   whatsappUrl: "https://wa.me/5534991614690?text=Ol%C3%A1%20Luiz%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar!",
@@ -51,7 +51,7 @@ export const personalInfo = {
 export const projects: ProjectItem[] = [
   {
     id: "koris",
-    title: "KORIS — Sistema de Gestão de Caixa & Operações",
+    title: "KORIS: Sistema de Gestão de Caixa e Operações",
     category: "Em Produção / Domínio Próprio",
     tagline: "Controle financeiro e operação multi-unidade com backend em Go e frontend em Next.js.",
     description:
@@ -66,7 +66,7 @@ export const projects: ProjectItem[] = [
     architecture: [
       "Next.js 16 App Router com Server Components e Apollo Client.",
       "API Gateway GraphQL roteando consultas para microsserviços em Go.",
-      "Mensageria com RabbitMQ (exchanges 'direct' e filas duráveis com ack manual).",
+      "Mensageria com RabbitMQ (exchanges direct e filas duráveis com ack manual).",
       "Banco PostgreSQL com transações ACID completas e containerização Docker.",
     ],
     githubUrl: "https://github.com/LuizApenas/sistemagestaocaixa",
@@ -75,7 +75,7 @@ export const projects: ProjectItem[] = [
   },
   {
     id: "sistema-documentos",
-    title: "Sistema de Documentos & Laudos Veiculares",
+    title: "Sistema de Documentos e Laudos Veiculares",
     category: "Em Produção / Gestão de Laudos",
     tagline: "Plataforma em produção para emissão, armazenamento e gestão eletrônica de laudos e vistorias em PDF.",
     description:
@@ -89,7 +89,7 @@ export const projects: ProjectItem[] = [
     ],
     architecture: [
       "Frontend Next.js com autenticação e painel de auditoria.",
-      "Backend Node.js/TypeScript com esteira de geração e compressão de PDFs.",
+      "Backend Node.js e TypeScript com esteira de geração e compressão de PDFs.",
       "Banco PostgreSQL para versionamento documental e hash de autenticidade.",
       "Deploy conteinerizado com Docker.",
     ],
@@ -104,7 +104,7 @@ export const projects: ProjectItem[] = [
   },
   {
     id: "padaria-pao-fresquim",
-    title: "Padaria Pão Fresquim — Sistema Interdisciplinar Completo",
+    title: "Padaria Pão Fresquim (Sistema Interdisciplinar)",
     category: "Acadêmico Interdisciplinar",
     tagline: "Ecossistema integrando Programação Orientada a Objetos 2, Programação Web 2 e Chatbot inteligente.",
     description:
@@ -128,7 +128,7 @@ export const projects: ProjectItem[] = [
   },
   {
     id: "megalaudo-automacao",
-    title: "Megalaudo — Automação de Montagem de Laudos com Filas",
+    title: "Megalaudo: Automação do Processo de Montagem de Laudos com Filas",
     category: "Automação Operacional",
     tagline: "Pipeline em Python com filas assíncronas para montagem e geração de laudos veiculares.",
     description:
@@ -152,8 +152,8 @@ export const projects: ProjectItem[] = [
   },
   {
     id: "financas-casal",
-    title: "Finanças Casal — Gestão Financeira Compartilhada",
-    category: "Finanças Pessoais & Full-Stack",
+    title: "Finanças Casal: Gestão Financeira Compartilhada",
+    category: "Finanças Pessoais / Full-Stack",
     tagline: "Aplicação full-stack para controle orçamentário compartilhado, divisão de despesas e metas financeiras.",
     description:
       "Sistema desenvolvido para simplificar o controle financeiro de duas pessoas com despesas compartilhadas. Permite rateio proporcional baseado em renda individual, categorização inteligente de gastos, metas de economia e projeção de fluxo de caixa mensal. Em uso contínuo no dia a dia.",
@@ -170,8 +170,8 @@ export const projects: ProjectItem[] = [
   },
   {
     id: "chatbot-web",
-    title: "ChatBot-Web — Motor Conversacional Web",
-    category: "Chatbots & Webhooks",
+    title: "ChatBot-Web: Motor Conversacional Web",
+    category: "Chatbots / Webhooks",
     tagline: "Interface web interativa para fluxo de atendimento e triagem automatizada com webhooks.",
     description:
       "Solução conversacional web leve e modular criada para demonstração de fluxos de atendimento automático, resolução de dúvidas e coleta de dados estruturados.",
@@ -186,7 +186,7 @@ export const projects: ProjectItem[] = [
   },
   {
     id: "comandas-mobile",
-    title: "Comandas Mobile — App de Restaurante",
+    title: "Comandas Mobile: App de Restaurante",
     category: "Mobile",
     tagline: "Aplicativo mobile para agilidade no atendimento de mesas com envio em tempo real para a cozinha.",
     description:
@@ -204,12 +204,12 @@ export const projects: ProjectItem[] = [
 
 export const experiences: ExperienceItem[] = [
   {
-    period: "2025 – Presente",
+    period: "2025 a Presente",
     role: "Desenvolvedor Full-Stack Junior",
-    company: "Engenharia de Software, Microsserviços & Sistemas Distribuídos",
+    company: "Engenharia de Software, Microsserviços e Sistemas Distribuídos",
     location: "Uberlândia, MG",
     summary:
-      "Atuação no desenvolvimento de microsserviços em Go (Golang), mensageria com RabbitMQ, schemas federados em GraphQL e interfaces em Next.js/React.",
+      "Atuação no desenvolvimento de microsserviços em Go (Golang), mensageria com RabbitMQ, schemas federados em GraphQL e interfaces em Next.js e React.",
     achievements: [
       "Desenvolvimento de microsserviços em Go com concorrência segura (goroutines) e baixo footprint de memória.",
       "Construção de APIs GraphQL unificadas e schemas integrados via Apollo Client no frontend Next.js.",
@@ -220,21 +220,22 @@ export const experiences: ExperienceItem[] = [
     technologies: ["Go", "GraphQL", "RabbitMQ", "Next.js", "React", "TypeScript", "PostgreSQL", "Docker"],
   },
   {
-    period: "2022 – 2025",
-    role: "Sócio Proprietário / Gerente Geral",
+    period: "2022 a Presente",
+    role: "Sócio Proprietário / Gestão e Desenvolvimento de Ferramentas",
     company: "ECV Uberlândia Ltda. (Empresa Credenciada de Vistoria)",
     location: "Uberlândia, MG",
     summary:
-      "Liderança executiva e operacional da empresa, respondendo por gestão de pessoas, saúde financeira, processos de atendimento e conformidade técnica.",
+      "Sócio proprietário atuando na gestão executiva, saúde financeira da empresa e no desenvolvimento de softwares e ferramentas para automação da gestão operacional.",
     achievements: [
-      "Gestão direta de equipe multidisciplinar, contratações, alinhamentos e cultura de excelência operacional.",
-      "Supervisão direta das finanças, fluxo de caixa, precificação de serviços e relacionamento com fornecedores e órgãos fiscalizadores.",
-      "Identificação dos maiores gargalos operacionais e desenvolvimento dos primeiros softwares e automações em Python com filas assíncronas para montagem de laudos, reduzindo o tempo de 20 minutos para 2 a 3 minutos por veículo.",
+      "Proprietário da empresa com gestão direta de equipe técnica, contratações e cultura operacional.",
+      "Supervisão direta das finanças, fluxo de caixa, precificação de serviços e relacionamento com órgãos fiscalizadores de trânsito.",
+      "Identificação de gargalos operacionais e desenvolvimento de softwares e automações em Python com filas assíncronas para montagem de laudos, reduzindo o tempo de 20 minutos para 2 a 3 minutos por veículo.",
+      "Aplicação direta da vivência de dono e gestor na concepção de ferramentas de software para controle financeiro e processos.",
     ],
-    technologies: ["Gestão Operacional", "Liderança", "Finanças", "Otimização de Processos", "Automação Python"],
+    technologies: ["Visão de Negócio", "Gestão Financeira", "Fluxo de Caixa", "Automação Python", "Otimização de Processos"],
   },
   {
-    period: "2019 – 2022",
+    period: "2019 a 2022",
     role: "Coordenador Administrativo / Vistoriador",
     company: "Iso Prime Brasil Vistorias Ltda.",
     location: "Uberlândia, MG",
@@ -247,8 +248,8 @@ export const experiences: ExperienceItem[] = [
     technologies: ["Inspeção Técnica", "Treinamento de Equipe", "Auditoria", "Atendimento"],
   },
   {
-    period: "2018 – 2019",
-    role: "Entregador & Atendimento Operacional",
+    period: "2018 a 2019",
+    role: "Entregador e Atendimento Operacional",
     company: "Trabalho Autônomo e Serviços de Entrega",
     location: "Uberlândia, MG",
     summary:
@@ -264,25 +265,25 @@ export const experiences: ExperienceItem[] = [
 
 export const trajectoryMilestones = [
   {
-    badge: "FASE 01 • A BASE",
-    role: "Entregador & Atendimento de Rua",
-    period: "2018 – 2019",
+    badge: "FASE 01: A BASE",
+    role: "Entregador e Atendimento de Rua",
+    period: "2018 a 2019",
     tagline: "Resiliência, agilidade de rua e trabalho duro",
     description:
       "A linha de frente do trabalho. Entregar pedidos sob chuva ou sol ensina pontualidade inegociável, agilidade na tomada de decisão e a certeza de que nenhuma tarefa é grande demais quando se tem disciplina. A base que formou o caráter e a disposição para encarar qualquer desafio técnico.",
   },
   {
-    badge: "FASE 02 • O NEGÓCIO",
-    role: "Sócio Proprietário & Gerente Geral de ECV",
-    period: "2022 – 2025",
-    tagline: "Gestão executiva, fluxo de caixa e o despertar para o código",
+    badge: "FASE 02: O NEGÓCIO",
+    role: "Sócio Proprietário de ECV e Dev de Ferramentas",
+    period: "2022 a Presente",
+    tagline: "Visão de dono, fluxo de caixa e criação de ferramentas reais",
     description:
-      "Liderança de uma empresa credenciada de vistorias automotivas. Controle do fluxo de caixa, negociação, auditorias de órgãos de trânsito e gestão de pessoas. Sentindo na pele a dor dos processos lentos e manuais, começou a escrever scripts em Python com filas para automatizar laudos de 20 min para 2 min. O código nasceu para salvar a operação da própria empresa.",
+      "Sócio proprietário de empresa credenciada de vistorias automotivas. Vivenciando na pele as dores de fluxo de caixa, gestão de equipe e gargalos operacionais, utilizo a programação para criar ferramentas de software que transformam a gestão do negócio, reduzindo custos e tempo de processo.",
   },
   {
-    badge: "FASE 03 • A ENGENHARIA",
-    role: "Desenvolvedor Full-Stack (Go + GraphQL + RabbitMQ + Next.js)",
-    period: "2025 – Presente",
+    badge: "FASE 03: A ENGENHARIA",
+    role: "Desenvolvedor Full-Stack (Go, GraphQL, RabbitMQ, Next.js)",
+    period: "2025 a Presente",
     tagline: "Microsserviços de alto desempenho e plataformas em produção",
     description:
       "Graduando em Sistemas de Informação (7º período). Engenharia de software aplicada a microsserviços em Go, mensageria distribuída com RabbitMQ, APIs GraphQL unificadas e frontends modernos em Next.js. Criador da plataforma KORIS (domínio próprio) e sistemas distribuídos.",
@@ -292,7 +293,7 @@ export const trajectoryMilestones = [
 export const education = {
   degree: "Bacharelado em Sistemas de Informação",
   institution: "Centro Universitário Anhanguera (Uberlândia/MG)",
-  period: "2022 – 2026 (Previsão)",
+  period: "2022 a 2026 (Previsão)",
   status: "7º Período em andamento",
   focus: "Engenharia de Software, Algoritmos Avançados, Arquitetura de Sistemas e Banco de Dados",
 };

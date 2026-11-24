@@ -47,7 +47,7 @@ export default function VitrineTerminalPage() {
   const [theme, setTheme] = useState<"cyan" | "green" | "amber">("cyan");
   const [copied, setCopied] = useState(false);
 
-  // Active display in inspector (Clean single-screen buffer — NO endless stacking!)
+  // Active display in inspector (Buffer unico sem empilhamento)
   const [activeDisplay, setActiveDisplay] = useState<ActiveDisplayState>({
     type: "project",
     projectId: "koris",
@@ -76,7 +76,7 @@ export default function VitrineTerminalPage() {
     if (el) {
       el.scrollIntoView({ behavior: "smooth", block: "center" });
       el.classList.remove("pulse-target");
-      void el.offsetWidth; // trigger reflow
+      void el.offsetWidth;
       el.classList.add("pulse-target");
       setTimeout(() => el.classList.remove("pulse-target"), 2000);
     }
@@ -248,10 +248,10 @@ export default function VitrineTerminalPage() {
         <div className="cli-nav-right">
           <nav style={{ display: "flex", gap: "14px", alignItems: "center" }}>
             <a href="#vitrine-section" className="cli-nav-link" style={{ color: "var(--term-accent)", fontWeight: 700 }}>
-              ✦ Vitrine de Projetos
+              Vitrine de Projetos
             </a>
             <a href="#trajetoria-section" className="cli-nav-link">
-              ◈ Trajetória & Origens
+              Trajetória e Origens
             </a>
             <a href="#terminal-section" className="cli-nav-link">
               &gt;_ Terminal Interativo
@@ -334,16 +334,19 @@ export default function VitrineTerminalPage() {
                   <span className="cli-nf-k">Formação:</span> Sistemas de Informação (7º Período)
                 </div>
                 <div className="cli-nf-row">
-                  <span className="cli-nf-k">Posição Atual:</span> Full-Stack Junior (Go & Next.js)
+                  <span className="cli-nf-k">Posição Atual:</span> Full-Stack Junior (Go e Next.js)
                 </div>
                 <div className="cli-nf-row">
                   <span className="cli-nf-k">Projeto Destaque:</span> KORIS (Go + GraphQL + RabbitMQ)
                 </div>
                 <div className="cli-nf-row">
-                  <span className="cli-nf-k">Em Produção:</span> KORIS & Sistema de Documentos
+                  <span className="cli-nf-k">Em Produção:</span> KORIS e Sistema de Documentos
                 </div>
                 <div className="cli-nf-row">
-                  <span className="cli-nf-k">Trajetória Real:</span> Entregador ➔ Sócio/Gestor ECV ➔ Dev Full-Stack
+                  <span className="cli-nf-k">Gestão e Dev:</span> Sócio Proprietário de ECV e Desenvolvedor (2022 a Presente)
+                </div>
+                <div className="cli-nf-row">
+                  <span className="cli-nf-k">Trajetória Real:</span> Entregador ➔ Sócio Proprietário e Dev ➔ Sistemas Distribuídos
                 </div>
                 <div className="cli-nf-row">
                   <span className="cli-nf-k">Status:</span>{" "}
@@ -365,7 +368,7 @@ export default function VitrineTerminalPage() {
 
                 <div style={{ display: "flex", gap: "8px", marginTop: "14px", flexWrap: "wrap" }}>
                   <a href="#vitrine-section" className="cli-btn-link" style={{ background: "var(--term-accent)", color: "#000", fontWeight: 800 }}>
-                    <span>✦ Ver Vitrine Completa</span>
+                    <span>Ver Vitrine Completa</span>
                   </a>
                   <a href={personalInfo.whatsappUrl} target="_blank" rel="noreferrer" className="cli-btn-link">
                     <WhatsAppIcon size={12} />
@@ -386,14 +389,14 @@ export default function VitrineTerminalPage() {
                 activeSystem={activeDisplay.projectId || activeDisplay.commandText}
               />
               <div style={{ display: "flex", gap: "8px", justifyContent: "space-between", fontSize: "0.72rem", color: "var(--term-muted)", padding: "0 4px" }}>
-                <span>◈ Mova o mouse para interagir com o Core 3D</span>
+                <span>Mova o mouse para interagir com o Core 3D</span>
                 <span style={{ color: "var(--term-accent)", fontWeight: 700 }}>Interactive WebGL</span>
               </div>
             </div>
           </div>
 
           {/* ==============================================================
-              INSPECTOR RÁPIDO INTERATIVO (SEM EMPILHAMENTO INFINITO!)
+              INSPECTOR RÁPIDO INTERATIVO (SEM EMPILHAMENTO INFINITO)
              ============================================================== */}
           <div className="cli-quick-panel" style={{ marginTop: "12px", marginBottom: "20px" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px", flexWrap: "wrap", gap: "8px" }}>
@@ -492,7 +495,7 @@ export default function VitrineTerminalPage() {
 
                   <div className="cli-inspector-grid">
                     <div className="cli-inspector-box">
-                      <div className="cli-inspector-box-title">TECNOLOGIAS & STACK:</div>
+                      <div className="cli-inspector-box-title">TECNOLOGIAS E STACK:</div>
                       <div style={{ color: "var(--term-accent)", fontSize: "0.82rem", fontWeight: 600 }}>
                         {activeProjectData.stack.join(" • ")}
                       </div>
@@ -534,7 +537,7 @@ export default function VitrineTerminalPage() {
                       style={{ background: "var(--term-accent-dim)", borderColor: "var(--term-accent)" }}
                     >
                       <Eye size={13} />
-                      <span>✦ Rolar até o Card na Vitrine</span>
+                      <span>Rolar até o Card na Vitrine</span>
                     </button>
                   </div>
                 </motion.div>
@@ -552,18 +555,18 @@ export default function VitrineTerminalPage() {
                   <div className="cli-inspector-header">
                     <div className="cli-inspector-title-wrap">
                       <span className="cli-tag-live">TRAJETÓRIA REAL</span>
-                      <h3 className="cli-inspector-title">Origens: Entregador ➔ Sócio ECV ➔ Dev Full-Stack</h3>
+                      <h3 className="cli-inspector-title">Origens: Entregador ➔ Sócio Proprietário e Dev ➔ Sistemas Distribuídos</h3>
                     </div>
                   </div>
                   <div className="cli-about-block" style={{ border: "none", padding: 0, background: "transparent" }}>
                     <p>
-                      <strong>1. Entregas & Trabalho Operacional (2018–2019):</strong> O dinamismo das ruas, senso estrito de urgência e resiliência diária. A base de caráter e disciplina inegociável.
+                      <strong>1. Entregas e Trabalho Operacional (2018 a 2019):</strong> O dinamismo das ruas, senso estrito de urgência e resiliência diária. A base de caráter e disciplina inegociável.
                     </p>
                     <p>
-                      <strong>2. Sócio Proprietário & Gerente Geral de ECV (2022–2025):</strong> Gestão real de fluxo de caixa, precificação, equipe e auditorias de órgãos de trânsito. O despertar para o código nasceu da dor do negócio: criei os primeiros softwares e automações com filas em Python para reduzir laudos de 20 para 2 minutos.
+                      <strong>2. Sócio Proprietário de ECV e Desenvolvedor (2022 a Presente):</strong> Gestão real de fluxo de caixa, precificação, equipe e auditorias de órgãos de trânsito. Ainda sou proprietário da empresa e atuo como dev justamente construindo ferramentas de software de alta performance para resolver as dores reais de gestão da operação.
                     </p>
                     <p>
-                      <strong>3. Engenharia de Software Full-Stack (2025–Presente):</strong> Graduando em Sistemas de Informação (7º período). Desenvolvimento de microsserviços de alta concorrência em Go, mensageria com RabbitMQ, GraphQL e interfaces em Next.js.
+                      <strong>3. Engenharia de Software Full-Stack (2025 a Presente):</strong> Graduando em Sistemas de Informação (7º período). Desenvolvimento de microsserviços de alta concorrência em Go, mensageria com RabbitMQ, GraphQL e interfaces em Next.js.
                     </p>
                   </div>
                 </motion.div>
@@ -581,7 +584,7 @@ export default function VitrineTerminalPage() {
                   <div className="cli-inspector-header">
                     <div className="cli-inspector-title-wrap">
                       <span className="cli-tag-live">CURRÍCULO ATS</span>
-                      <h3 className="cli-inspector-title">Luiz Felipe dos Santos — Full-Stack Junior</h3>
+                      <h3 className="cli-inspector-title">Luiz Felipe dos Santos: Full-Stack Junior</h3>
                     </div>
                     <Link href="/curriculo" className="cli-btn-link" style={{ background: "var(--term-accent)", color: "#000", fontWeight: 800 }}>
                       <Printer size={13} />
@@ -589,7 +592,7 @@ export default function VitrineTerminalPage() {
                     </Link>
                   </div>
                   <p style={{ color: "#cbd5e1", fontSize: "0.88rem", lineHeight: "1.6" }}>
-                    Especialista em microsserviços com Go, GraphQL, RabbitMQ e Next.js. 7º período de Sistemas de Informação com bagagem comprovada de liderança e gestão financeira.
+                    Especialista em microsserviços com Go, GraphQL, RabbitMQ e Next.js. 7º período de Sistemas de Informação com vivência prática de liderança e gestão financeira.
                   </p>
                 </motion.div>
               )}
@@ -661,11 +664,11 @@ export default function VitrineTerminalPage() {
                     </div>
                   </div>
                   <div className="cli-help-grid">
-                    <div><span className="cli-cmd-name">koris</span> : Plataforma de Gestão de Caixa & Conciliação em Go + RabbitMQ</div>
+                    <div><span className="cli-cmd-name">koris</span> : Plataforma de Gestão de Caixa e Conciliação em Go + RabbitMQ</div>
                     <div><span className="cli-cmd-name">documentos</span> : Sistema de Laudos em PDF em parceria com Cayke Nakazone</div>
                     <div><span className="cli-cmd-name">padaria</span> : Sistema interdisciplinar Pão Fresquim (POO 2 + Web 2 + Bot)</div>
-                    <div><span className="cli-cmd-name">megalaudo</span> : Automação com Python e filas assíncronas (2-3 min por laudo)</div>
-                    <div><span className="cli-cmd-name">trajetoria</span> : Linha do tempo: Entregador ➔ Sócio ECV ➔ Dev Full-Stack</div>
+                    <div><span className="cli-cmd-name">megalaudo</span> : Automação com Python e filas assíncronas (2 a 3 min por laudo)</div>
+                    <div><span className="cli-cmd-name">trajetoria</span> : Linha do tempo: Entregador ➔ Sócio Proprietário e Dev ➔ Sistemas Distribuídos</div>
                     <div><span className="cli-cmd-name">curriculo</span> : Resumo de qualificações para recrutadores e ATS</div>
                     <div><span className="cli-cmd-name">contato</span> : E-mail, WhatsApp, LinkedIn e GitHub direto</div>
                   </div>
@@ -713,7 +716,7 @@ export default function VitrineTerminalPage() {
             <div className="vitrine-section-head">
               <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
                 <span className="vitrine-badge-live">VITRINE OFICIAL</span>
-                <h2 className="vitrine-title">Vitrine de Projetos & Engenharia</h2>
+                <h2 className="vitrine-title">Vitrine de Projetos e Engenharia</h2>
               </div>
               <span className="vitrine-counter">{projects.length} PROJETOS CATALOGADOS</span>
             </div>
@@ -743,14 +746,14 @@ export default function VitrineTerminalPage() {
                 className={`vitrine-filter-btn ${filter === "micro" ? "active" : ""}`}
                 type="button"
               >
-                Microsserviços & Go
+                Microsserviços e Go
               </button>
               <button
                 onClick={() => setFilter("automacao")}
                 className={`vitrine-filter-btn ${filter === "automacao" ? "active" : ""}`}
                 type="button"
               >
-                Automação & Processos
+                Automação e Processos
               </button>
               <button
                 onClick={() => setFilter("academico")}
@@ -761,7 +764,7 @@ export default function VitrineTerminalPage() {
               </button>
             </div>
 
-            {/* Vitrine Cards Grid (Clean, Architecture & Code Driven — Zero Noisy Images!) */}
+            {/* Vitrine Cards Grid */}
             <div className="vitrine-cards-grid">
               {filteredProjects.map((p) => {
                 const isHighlight = p.id === "koris";
@@ -786,7 +789,7 @@ export default function VitrineTerminalPage() {
                       <span className="cli-tag">{p.statusBadge || "SHOWCASE"}</span>
                     </div>
 
-                    {/* Card Content - Pure Clean Technical Craft */}
+                    {/* Card Content */}
                     <div className="vitrine-card-body">
                       <div className="vitrine-card-meta">
                         <span className="vitrine-mono-tag">{p.stack.slice(0, 4).join(" • ")}</span>
@@ -862,13 +865,13 @@ export default function VitrineTerminalPage() {
             <div className="vitrine-section-head">
               <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
                 <span className="vitrine-badge-live">TRAJETÓRIA REAL</span>
-                <h2 className="vitrine-title">Origens, Empreendedorismo & Engenharia</h2>
+                <h2 className="vitrine-title">Origens, Gestão de Negócio e Engenharia</h2>
               </div>
               <span className="vitrine-counter">SEM ATALHOS • VIVÊNCIA PRÁTICA</span>
             </div>
 
             <p className="vitrine-subtitle">
-              A união de resiliência operacional (trabalho nas entregas), liderança e gestão executiva de empresa real (ECV) com a engenharia técnica de microsserviços.
+              A união de resiliência operacional (trabalho nas entregas), liderança e gestão de empresa real (ECV) com a engenharia técnica de microsserviços.
             </p>
 
             <div className="trajetoria-timeline-grid">
