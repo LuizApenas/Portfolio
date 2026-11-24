@@ -1,64 +1,75 @@
-/* components/site-shell.tsx - Dark background layers, gradient header, footer watermark */
+"use client";
 
 import type { ReactNode } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import Image from "next/image";
 
-import { MobileNav } from "@/components/mobile-nav";
+import { PrototypeBar } from "@/components/prototype-bar";
 
-const links = [
+const navLinks = [
   { href: "/", label: "Início" },
-  { href: "/sobre", label: "Sobre" },
   { href: "/projetos", label: "Projetos" },
+  { href: "/curriculo", label: "Currículo" },
   { href: "/contato", label: "Contato" },
 ];
 
-export function SiteShell({
-  children,
-  pathname,
-}: {
-  children: ReactNode;
-  pathname: string;
-}) {
+export function SiteShell({ children }: { children: ReactNode }) {
+  const pathname = usePathname();
+
   return (
-    <>
-      {/* Fixed dark background layers: red glow orb, grid overlay */}
-      <div className="red-glow-orb" aria-hidden />
-      <div className="grid-overlay" aria-hidden />
+    <div className="container">
+      <header className="header">
+        <Link className="brand" href="/">
+          <Image
+            alt="Luiz Felipe"
+            className="brand-avatar"
+            height={40}
+            src="/images/portrait-square.jpg"
+            width={40}
+          />
+          <div>
+            <div className="brand-title">Luiz Felipe dos Santos</div>
+            <div className="brand-subtitle">Desenvolvedor Full-Stack</div>
+          </div>
+        </Link>
 
-      <div className="site-shell">
-        <header className="site-header">
-          <Link className="brand" href="/">
-            <span className="brand-mark">
-              <span>LF</span>
-            </span>
-            <span className="brand-text">Luiz Felipe Santos</span>
-          </Link>
+        <nav className="nav" aria-label="Navegação">
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href;
+            return (
+              <Link
+                className={isActive ? "active" : undefined}
+                href={link.href}
+                key={link.href}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
+        </nav>
+      </header>
 
-          <nav className="desktop-nav" aria-label="Navegação principal">
-            {links.map((link) => {
-              const isActive = pathname === link.href;
+      <main>{children}</main>
 
-              return (
-                <Link
-                  className={isActive ? "is-active" : undefined}
-                  href={link.href}
-                  key={link.href}
-                >
-                  {link.label}
-                </Link>
-              );
-            })}
-          </nav>
-
-          <MobileNav />
-        </header>
-
-        <main>{children}</main>
-
-        <footer className="site-footer">
-          <p>© {new Date().getFullYear()} Luiz Felipe Santos</p>
-        </footer>
-      </div>
-    </>
+      <footer className="footer">
+        <div>Luiz Felipe dos Santos • Uberlândia, MG</div>
+        <div style={{ display: "flex", gap: "16px" }}>
+          <a href="https://github.com/LuizApenas" target="_blank" rel="noreferrer">
+            github
+          </a>
+          <a href="https://linkedin.com/in/luiz-felipe-santos-95490b208" target="_blank" rel="noreferrer">
+            linkedin
+          </a>
+          <a href="https://wa.me/5534991614690" target="_blank" rel="noreferrer">
+            whatsapp
+          </a>
+          <a href="mailto:luizz.felipe.santos17@gmail.com">
+            email
+          </a>
+        </div>
+      </footer>
+      <PrototypeBar />
+    </div>
   );
 }

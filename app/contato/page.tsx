@@ -1,91 +1,70 @@
-/* app/contato/page.tsx - Contact page (dark theme via globals.css) */
-
-import Link from "next/link";
-
-import { PageIntro } from "@/components/page-intro";
-import { SectionHeading } from "@/components/section-heading";
 import { SiteShell } from "@/components/site-shell";
+import { personalInfo } from "@/lib/site-data";
 
 export default function ContactPage() {
   return (
-    <SiteShell pathname="/contato">
-      <PageIntro
-        description="Se você precisa de alguém com visão de operação, vontade de construir e capacidade de evoluir rápido, podemos conversar."
-        eyebrow="Contato"
-        title="Aberto a oportunidades, projetos e conversas sérias sobre produto e tecnologia."
-      />
+    <SiteShell>
+      <section>
+        <h1>Contato</h1>
+        <p className="hero-bio" style={{ marginBottom: "32px" }}>
+          Estou disponível para novas oportunidades profissionais como desenvolvedor Full-Stack / Backend
+          (Go, React, Node), além de projetos de automação e engenharia de software.
+        </p>
 
-      <section className="section">
-        <div className="contact-grid">
-          <article className="contact-card">
-            <span className="tag">WhatsApp</span>
-            <h2>Contato rápido</h2>
-            <p>Para iniciar uma conversa direta sobre projeto, parceria ou serviço.</p>
-            <Link
-              className="button button-primary"
-              href="https://wa.me/5534991614690?text=Olá%2C+vi+seu+portfólio+e+quero+conversar."
+        <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
+          <div>
+            <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "4px" }}>
+              WhatsApp (Direto)
+            </div>
+            <a
+              href={personalInfo.whatsappUrl}
               target="_blank"
+              rel="noreferrer"
+              style={{ fontSize: "1.1rem", fontWeight: 600 }}
             >
-              Chamar no WhatsApp
-            </Link>
-          </article>
+              {personalInfo.phone} ↗
+            </a>
+          </div>
 
-          <article className="contact-card">
-            <span className="tag">LinkedIn</span>
-            <h2>Rede profissional</h2>
-            <p>Perfil para networking, histórico profissional e novas conexões.</p>
-            <Link
-              className="button button-secondary"
-              href="https://www.linkedin.com/in/luiz-felipe-santos-95490b208/"
+          <div>
+            <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "4px" }}>
+              E-mail
+            </div>
+            <a
+              href={`mailto:${personalInfo.email}`}
+              style={{ fontSize: "1.1rem", fontWeight: 600 }}
+            >
+              {personalInfo.email} ↗
+            </a>
+          </div>
+
+          <div>
+            <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "4px" }}>
+              LinkedIn
+            </div>
+            <a
+              href={personalInfo.linkedin}
               target="_blank"
+              rel="noreferrer"
+              style={{ fontSize: "1.1rem", fontWeight: 600 }}
             >
-              Abrir LinkedIn
-            </Link>
-          </article>
+              linkedin.com/in/luiz-felipe-santos-95490b208 ↗
+            </a>
+          </div>
 
-          <article className="contact-card">
-            <span className="tag">GitHub</span>
-            <h2>Código e projetos</h2>
-            <p>Repositórios, experimentos e evolução técnica contínua.</p>
-            <Link
-              className="button button-secondary"
-              href="https://github.com/LuizApenas"
+          <div>
+            <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "4px" }}>
+              GitHub
+            </div>
+            <a
+              href={personalInfo.github}
               target="_blank"
+              rel="noreferrer"
+              style={{ fontSize: "1.1rem", fontWeight: 600 }}
             >
-              Ver GitHub
-            </Link>
-          </article>
-
-          <article className="contact-card">
-            <span className="tag">Email</span>
-            <h2>Propostas formais</h2>
-            <p>Canal melhor para convites profissionais e alinhamentos mais detalhados.</p>
-            <Link className="button button-secondary" href="mailto:luizz.felipe.santos17@gmail.com">
-              Enviar email
-            </Link>
-          </article>
-        </div>
-      </section>
-
-      <section className="section section-accent">
-        <SectionHeading
-          eyebrow="Interesses"
-          title="Onde consigo gerar mais valor hoje."
-        />
-
-        <div className="feature-grid">
-          <article className="feature-card">
-            <h3>CRM e operações internas</h3>
-            <p>Sistemas voltados para atendimento, qualificação, acompanhamento e gestão.</p>
-          </article>
-          <article className="feature-card">
-            <h3>Automação de fluxo</h3>
-            <p>Integrações com n8n, scripts e processos que eliminam trabalho repetitivo.</p>
-          </article>
-          <article className="feature-card">
-            <h3>Dashboards e produtos web</h3>
-            <p>Painéis com autenticação, métricas, regras de acesso e visão operacional.</p>
-          </article>
+              github.com/{personalInfo.githubUser} ↗
+            </a>
+          </div>
         </div>
       </section>
     </SiteShell>

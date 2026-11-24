@@ -1,22 +1,17 @@
 import type { Metadata } from "next";
-import { Inter, Manrope } from "next/font/google";
-
+import { Inter } from "next/font/google";
 import "./globals.css";
-
-const manrope = Manrope({
-  subsets: ["latin"],
-  variable: "--font-manrope",
-});
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Luiz Felipe Santos | Portfólio",
+  title: "Luiz Felipe dos Santos | Desenvolvedor Full-Stack",
   description:
-    "Portfólio de Luiz Felipe Santos com foco em CRM, automação, sistemas web e produtos orientados a operação.",
+    "Desenvolvedor Full-Stack focado em Go, GraphQL, RabbitMQ, Next.js e PostgreSQL. Uberlândia, MG.",
 };
 
 export default function RootLayout({
@@ -26,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${manrope.variable} ${inter.variable}`}>
+      <body className={inter.variable}>
         {children}
       </body>
     </html>

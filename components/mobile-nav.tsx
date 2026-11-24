@@ -1,15 +1,15 @@
-/* components/mobile-nav.tsx - Dark hamburger button and glassmorphism panel (styling in globals.css) */
-
 "use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { Menu, X } from "lucide-react";
 
 const links = [
   { href: "/", label: "Início" },
-  { href: "/sobre", label: "Sobre" },
   { href: "/projetos", label: "Projetos" },
+  { href: "/sobre", label: "Sobre Mim" },
+  { href: "/curriculo", label: "Currículo" },
   { href: "/contato", label: "Contato" },
 ];
 
@@ -22,34 +22,41 @@ export function MobileNav() {
   }, [pathname]);
 
   return (
-    <div className="mobile-nav">
+    <>
       <button
-        aria-controls="site-nav"
+        aria-controls="mobile-site-nav"
         aria-expanded={open}
-        aria-label="Abrir navegação"
-        className="menu-toggle"
-        onClick={() => setOpen((current) => !current)}
+        aria-label={open ? "Fechar menu" : "Abrir menu"}
+        className="mobile-nav-toggle"
+        onClick={() => setOpen((prev) => !prev)}
         type="button"
       >
-        <span />
-        <span />
+        {open ? <X size={20} /> : <Menu size={20} />}
       </button>
 
-      <nav className={`nav-panel${open ? " is-open" : ""}`} id="site-nav">
-        {links.map((link) => {
-          const isActive = pathname === link.href;
-
-          return (
-            <Link
-              className={isActive ? "is-active" : undefined}
-              href={link.href}
-              key={link.href}
-            >
-              {link.label}
-            </Link>
-          );
-        })}
-      </nav>
-    </div>
+      {open && (
+        <div className="mobile-menu-drawer" id="mobile-site-nav">
+          {links.map((link) => {
+            const isActive = pathname === link.href;
+            return (
+              <Link
+                className={`nav-link ${isActive ? "is-active" : ""}`}
+                href={link.href}
+                key={link.href}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
+          <Link
+            className="btn btn-primary btn-sm"
+            href="/curriculo"
+            style={{ marginTop: "12px", width: "100%" }}
+          >
+            Acessar Currículo
+          </Link>
+        </div>
+      )}
+    </>
   );
 }

@@ -1,105 +1,56 @@
-/* app/sobre/page.tsx - About page (dark theme via globals.css) */
-
+import Link from "next/link";
 import Image from "next/image";
-
-import { SectionHeading } from "@/components/section-heading";
 import { SiteShell } from "@/components/site-shell";
+import { personalInfo, education } from "@/lib/site-data";
 
 export default function AboutPage() {
   return (
-    <SiteShell pathname="/sobre">
-      <section className="page-hero page-hero-with-image">
-        <div>
-          <span className="eyebrow">Sobre mim</span>
-          <h1>Minha base mistura tecnologia, gestão e rotina operacional.</h1>
-          <p>
-            Isso influencia diretamente a forma como penso produto: gosto de software
-            que resolve gargalo, organiza processo e melhora a vida de quem usa.
-          </p>
+    <SiteShell>
+      <section>
+        <h1>Sobre mim</h1>
+
+        <div style={{ margin: "24px 0", maxWidth: "260px" }}>
+          <Image
+            alt="Luiz Felipe"
+            height={320}
+            src="/images/portrait.jpg"
+            style={{ width: "100%", height: "auto", borderRadius: "8px", border: "1px solid var(--border)" }}
+            width={260}
+          />
         </div>
 
-        <Image
-          alt="Retrato de Luiz Felipe Santos"
-          className="portrait"
-          height={900}
-          src="/images/portrait.jpg"
-          width={720}
-        />
-      </section>
+        <p className="hero-bio">
+          Tenho 22 anos, sou de Uberlândia/MG e estou no 7º período de{" "}
+          <strong>Bacharelado em Sistemas de Informação</strong>.
+        </p>
 
-      <section className="section">
-        <div className="two-column">
-          <article className="panel">
-            <h2>Trajetória</h2>
-            <p>
-              Sou estudante de Sistemas de Informação e venho migrando cada vez mais
-              para uma atuação focada em desenvolvimento de software, automação e sistemas web.
-            </p>
-            <p>
-              A experiência com rotina empresarial, atendimento e gestão me deu repertório
-              para enxergar software como ferramenta de operação, não apenas como código.
-            </p>
-          </article>
+        <p className="hero-bio">
+          Minha formação prática começou na operação de uma empresa: entre 2022 e 2025 fui{" "}
+          <strong>sócio proprietário e gerente geral</strong> da ECV Uberlândia Ltda. Lá eu
+          lidava todos os dias com equipe, atendimento ao cliente, fluxo de caixa e gargalos
+          operacionais.
+        </p>
 
-          <article className="panel">
-            <h2>Como penso</h2>
-            <p>
-              Gosto de entender contexto, restrição e impacto. Quando projeto uma solução,
-              penso em fluxo, permissões, dados, confiabilidade e clareza de interface.
-            </p>
-            <p>
-              Tenho interesse especial por CRM, dashboards, integrações, backend e
-              automações que reduzam trabalho manual.
-            </p>
-          </article>
-        </div>
-      </section>
+        <p className="hero-bio">
+          Para resolver a ineficiência que vivíamos na rotina, comecei a programar automações em{" "}
+          <strong>Python</strong> com <strong>OpenCV</strong> e <strong>Tesseract OCR</strong> para
+          ler fotos de vistorias e preencher laudos automaticamente. Essa necessidade prática
+          me puxou com força para a engenharia de software.
+        </p>
 
-      <section className="section">
-        <SectionHeading
-          eyebrow="Competências"
-          title="O que venho aplicando nos projetos mais recentes."
-        />
+        <p className="hero-bio">
+          Hoje atuo como <strong>Desenvolvedor Full-Stack</strong>, construindo microsserviços em{" "}
+          <strong>Go</strong> com <strong>GraphQL</strong> e mensageria assíncrona via{" "}
+          <strong>RabbitMQ</strong>, persistência relacional no <strong>PostgreSQL</strong> e
+          interfaces ágeis e tipadas com <strong>Next.js</strong>, <strong>React</strong> e{" "}
+          <strong>TypeScript</strong>.
+        </p>
 
-        <div className="feature-grid">
-          <article className="feature-card">
-            <h3>Frontend</h3>
-            <p>Next.js, React, TypeScript, Tailwind, interfaces orientadas a painel e experiência responsiva.</p>
-          </article>
-          <article className="feature-card">
-            <h3>Backend</h3>
-            <p>Node.js, Express, Go, autenticação com Firebase, APIs REST e integração com banco.</p>
-          </article>
-          <article className="feature-card">
-            <h3>Dados e infraestrutura</h3>
-            <p>Supabase, PostgreSQL, Edge Functions, organização de schema e visão operacional.</p>
-          </article>
-          <article className="feature-card">
-            <h3>Automação</h3>
-            <p>n8n, scripts em Python e fluxos para reduzir tarefas repetitivas e conectar sistemas.</p>
-          </article>
-        </div>
-      </section>
-
-      <section className="section section-accent">
-        <SectionHeading
-          eyebrow="Contexto real"
-          title="Minha experiência fora do código também molda meu trabalho."
-        />
-
-        <div className="gallery-grid">
-          <figure className="gallery-card">
-            <Image alt="Luiz Felipe programando" height={640} src="/images/coding-cat.jpg" width={900} />
-            <figcaption>Rotina de estudo, construção e iteração constante.</figcaption>
-          </figure>
-          <figure className="gallery-card">
-            <Image alt="Luiz Felipe na empresa" height={640} src="/images/company.jpg" width={900} />
-            <figcaption>Vivência com gestão e operação no ambiente empresarial.</figcaption>
-          </figure>
-          <figure className="gallery-card">
-            <Image alt="Luiz Felipe trabalhando" height={640} src="/images/daily-work.jpg" width={900} />
-            <figcaption>Disciplina, esforço e contato direto com a realidade do dia a dia.</figcaption>
-          </figure>
+        <div style={{ marginTop: "32px", display: "flex", gap: "16px" }}>
+          <Link href="/curriculo">Ver currículo completo →</Link>
+          <a href={personalInfo.whatsappUrl} target="_blank" rel="noreferrer">
+            Chamar no WhatsApp →
+          </a>
         </div>
       </section>
     </SiteShell>

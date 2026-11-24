@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currículo - Luiz Felipe dos Santos</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #0f172a;
+      background-color: #f8fafc;
+      line-height: 1.5;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 48px;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+    header {
+      border-bottom: 2px solid #0f172a;
+      padding-bottom: 16px;
+      margin-bottom: 24px;
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #0f172a;
+    }
+    .subtitle {
+      font-size: 15px;
+      font-weight: 700;
+      color: #0284c7;
+      margin-top: 4px;
+      margin-bottom: 10px;
+    }
+    .contacts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 13px;
+      color: #475569;
+    }
+    .contacts a {
+      color: #0284c7;
+      text-decoration: none;
+    }
+    h2 {
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #0284c7;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 4px;
+      margin-top: 22px;
+      margin-bottom: 12px;
+    }
+    p, li {
+      font-size: 13.5px;
+      color: #334155;
+    }
+    .experience-item {
+      margin-bottom: 16px;
+    }
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .exp-title {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .exp-date {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #0284c7;
+    }
+    .exp-sub {
+      font-size: 13px;
+      color: #64748b;
+      font-style: italic;
+      margin-bottom: 6px;
+    }
+    ul {
+      padding-left: 18px;
+    }
+    li {
+      margin-bottom: 4px;
+    }
+    .project-item {
+      margin-bottom: 12px;
+    }
+    .skill-block {
+      font-size: 13px;
+      margin-bottom: 6px;
+    }
+    .actions-bar {
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+    }
+    .btn {
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid #cbd5e1;
+      background: #ffffff;
+      color: #0f172a;
+      text-decoration: none;
+    }
+    .btn-primary {
+      background: #0284c7;
+      color: #ffffff;
+      border-color: #0284c7;
+    }
+    @media print {
+      body { background: #fff; padding: 0; }
+      .container { box-shadow: none; padding: 0; max-width: 100%; }
+      .actions-bar { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="actions-bar">
+      <button class="btn btn-primary" onclick="window.print()">Imprimir / Salvar em PDF</button>
+      <a class="btn" href="https://github.com/LuizApenas">Ver GitHub</a>
+    </div>
+
+    <header>
+      <h1>LUIZ FELIPE DOS SANTOS</h1>
+      <div class="subtitle">Desenvolvedor Full-Stack | Microsserviços, Go, GraphQL, Next.js & React</div>
+      <div class="contacts">
+        <span>📍 Uberlândia/MG</span>
+        <span>📱 (34) 99161-4690</span>
+        <span>✉️ luizz.felipe.santos17@gmail.com</span>
+        <span>🔗 <a href="https://github.com/LuizApenas">github.com/LuizApenas</a></span>
+        <span>💼 <a href="https://linkedin.com/in/luiz-felipe-santos-95490b208">LinkedIn</a></span>
+      </div>
+    </header>
+
+    <section>
+      <h2>Perfil Profissional</h2>
+      <p>
+        Desenvolvedor Full-Stack focado em arquiteturas distribuídas e microsserviços com <strong>Go</strong>, <strong>GraphQL</strong>, <strong>RabbitMQ</strong>, <strong>PostgreSQL</strong>, <strong>React</strong> e <strong>TypeScript</strong>. Graduando em Sistemas de Informação (7º período), uno bagagem diferenciada em gestão executiva e liderança operacional (ex-Sócio Proprietário e Gerente Geral) a uma visão técnica orientada a resultados, eficiência de fluxo e automação inteligente.
+      </p>
+    </section>
+
+    <section>
+      <h2>Experiência Profissional</h2>
+
+      <div class="experience-item">
+        <div class="exp-header">
+          <span class="exp-title">Desenvolvedor Full-Stack Junior</span>
+          <span class="exp-date">2025 – Presente</span>
+        </div>
+        <div class="exp-sub">Posição Atual • Microsserviços e Arquiteturas Distribuídas</div>
+        <ul>
+          <li>Desenvolvimento de microsserviços e micro front-ends com arquitetura distribuída e escalabilidade horizontal.</li>
+          <li>Backend em Go com APIs GraphQL tipadas e comunicação assíncrona desacoplada via RabbitMQ.</li>
+          <li>Front-end moderno em React / Next.js e TypeScript, integrado via Apollo Client com caching otimizado.</li>
+          <li>Modelagem relacional e otimização de queries no PostgreSQL, containerização com Docker e versionamento Git.</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <div class="exp-header">
+          <span class="exp-title">Sócio Proprietário / Gerente Geral</span>
+          <span class="exp-date">2022 – 2025</span>
+        </div>
+        <div class="exp-sub">ECV Uberlândia Ltda. • Gestão Executiva e Operacional</div>
+        <ul>
+          <li>Gestão de equipes multidisciplinares, contratações, alinhamentos e cultura de excelência operacional.</li>
+          <li>Supervisão direta das finanças, fluxo de caixa, precificação, logística e atendimento ao cliente.</li>
+          <li>Implementação de melhorias internas em processos que aumentaram a produtividade em mais de 30%.</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <div class="exp-header">
+          <span class="exp-title">Coordenador Administrativo / Vistoriador</span>
+          <span class="exp-date">2019 – 2022</span>
+        </div>
+        <div class="exp-sub">Iso Prime Brasil Vistorias Ltda.</div>
+        <ul>
+          <li>Atendimento qualificado a clientes e parceiros, rotinas administrativas e inspeção técnica veicular regulatória.</li>
+          <li>Treinamento de novos colaboradores e melhoria contínua de fluxos de emissão de laudos.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Projetos Técnicos em Destaque</h2>
+
+      <div class="project-item">
+        <strong>Sistema de Gestão de Caixa & Operações</strong> — <em>GoLang, Next.js, GraphQL, RabbitMQ, PostgreSQL, Docker</em>
+        <p>Sistema distribuído multi-unidade para prestadoras de serviços. Fechamento de caixa em tempo real, mensageria com RabbitMQ para eventos contábeis assíncronos e dashboards de métricas.</p>
+      </div>
+
+      <div class="project-item">
+        <strong>Megalaudo & Automação com Visão Computacional (OCR)</strong> — <em>Python, OpenCV, Tesseract OCR, Selenium</em>
+        <p>Extração automática de placas e números de chassi a partir de fotos de veículos, eliminando 85% do trabalho manual no preenchimento de laudos com exportação em PDF.</p>
+      </div>
+
+      <div class="project-item">
+        <strong>Comandas Mobile</strong> — <em>React Native, Expo, TypeScript, Tailwind, WebSockets</em>
+        <p>Aplicativo de restaurante para garçons com login rápido por PIN de 4 dígitos, sincronização em tempo real de pedidos com a cozinha e fluxo offline-first.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Formação Acadêmica</h2>
+      <div class="exp-header">
+        <strong>Bacharelado em Sistemas de Informação</strong>
+        <span class="exp-date">7º Período em andamento</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Habilidades Técnicas</h2>
+      <div class="skill-block"><strong>Stack Principal:</strong> TypeScript, React, Next.js, Go (Golang), GraphQL, PostgreSQL, Docker, Git, Node.js</div>
+      <div class="skill-block"><strong>Infra & Mensageria:</strong> RabbitMQ, Redis, Microsserviços, Micro Front-ends, Apollo Client, RESTful APIs</div>
+      <div class="skill-block"><strong>Automação & OCR:</strong> Python, Selenium, OpenCV, Tesseract OCR, Scripts Operacionais</div>
+      <div class="skill-block"><strong>Idiomas:</strong> Português (Nativo), Inglês (Intermediário) | <strong>Idade:</strong> 22 anos | <strong>CNH:</strong> AB</div>
+    </section>
+  </div>
+</body>
+</html>
